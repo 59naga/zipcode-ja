@@ -1,6 +1,6 @@
 {
   "name": "zipcode-ja",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "zipcodes of japanpost.jp as static properties",
   "main": "index.js",
   "files": [
