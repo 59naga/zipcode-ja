@@ -14,7 +14,7 @@ browsers:
   - name: ipad
     version: latest
   - name: android
-    version: 4.1..latest
+    version: [4.1,4.4,latest]
 
 browserify:
   - transform: brfs
