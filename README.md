@@ -8,12 +8,6 @@
   <a href="https://travis-ci.org/59naga/zipcode-ja">
     <img src="http://img.shields.io/travis/59naga/zipcode-ja.svg?style=flat-square">
   </a>
-  <a href="https://codeclimate.com/github/59naga/zipcode-ja/coverage">
-    <img src="https://img.shields.io/codeclimate/github/59naga/zipcode-ja.svg?style=flat-square">
-  </a>
-  <a href="https://codeclimate.com/github/59naga/zipcode-ja">
-    <img src="https://img.shields.io/codeclimate/coverage/github/59naga/zipcode-ja.svg?style=flat-square">
-  </a>
   <a href="https://gemnasium.com/59naga/zipcode-ja">
     <img src="https://img.shields.io/gemnasium/59naga/zipcode-ja.svg?style=flat-square">
   </a>
