@@ -1,0 +1,20 @@
+# See: https://github.com/defunctzombie/zuul/wiki/zuul.yml
+ui: mocha-bdd
+browsers:
+  - name: chrome
+    version: latest
+  - name: ie
+    version: 9..latest
+  - name: firefox
+    version: latest
+  - name: safari
+    version: latest
+  - name: iphone
+    version: latest
+  - name: ipad
+    version: latest
+  - name: android
+    version: 4.1..latest
+
+browserify:
+  - transform: brfs

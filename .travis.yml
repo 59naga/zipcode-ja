@@ -1,0 +1,48 @@
+notifications:
+  email: false
+
+# Quick boot options
+sudo: false
+cache:
+  directories:
+    - node_modules
+
+# Ignore version tags
+branches:
+  except:
+    - /^v[0-9]/
+
+# Language options
+language: node_js
+before_install:
+  - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+node_js:
+  - 4
+before_script:
+  - npm prune
+script:
+  - npm run build
+  - npm run test
+  - npm run lint
+
+# Npm publish options
+deploy:
+  skip_cleanup: true # keep the devDependencies
+  provider: npm
+  email: i59naga@icloud.com
+  api_key:
+    secure: Y+nt75BAkBSshHgS/FCjC7BBmtadNyFmcT5PTEjFxneLpW5SBPe/58iUhxkt5xSDZbxr1l7TH+eOgROxmHx13OROuCUcWrK3m4tbHBbiaI3GcQ7hCEfpnqWeUF53seqDabikypttHcYmELJtW1H+il6U2U5YwPDrEuSOGhnmx1yoZOZ6DCXuLSi/JgLhCY9m7AuvckH40B/7kGMad58Df81EKZYM37/icuG85pWgCoJcPIV1XoF3KTl5T9rPn9pxLdx25xBB/P4tjJ7v+gKuiKiVBJTSpTtlJEQCba/1dWNH1q1/305cgJ/16PlMs0yENQxwVxtcyHpXoULHb0WnGf6Y3YsjG23N/b0GFtgC/lvH/+PBmvbinguu4vrSk53gxqPyZX2+vyvHAtcYN2cssVMe0D3RmPC95U24qeNZ3sqo6w8/C7dk+UjkaBs2/6dUxF0buUmE+iyOmCMQgSiphsGgoqtqCus/qt7vxs6LpIHl/AB+HabQFMMDd0vn091HrFZSxErIr7a57xI7eWcMXPC2sfa2xBu1i5pOWEEb7r8lYnkrCuOjN46/d2VlfFDhLMqqOSvykvrIksSTvHthwPzkaTsNq37/rZmzi+rBs57b3Otvo1EEy2Hcop7FcwBUc/BkrFMPrpV16/IO9Z+V7zilny+kOn+WU238oG6ifM8=
+  on:
+    node: 4
+
+# SAUCE_TOKENS
+env:
+  global:
+    - secure: k9rExG3Ze2gpJGcIVUL3uxlLmXUQeSdoOWb14EzJhxnCxJ8BrU1Ne5GkeM490eNfvWljbmATLeOmB6fHM+tN5/b/4L5b0ow6yLwOKSgCZNg8A5z1rnuZTzpA3O1LPeQ2KQGWMz08UR5i6zbgXiqHUAZM4yGmBBiH0Pje07e0MSPToyyzAFFAkT3Vg52H9djYTf09mdFftXlryobs2Z6cEzzsNRFBVdakRNlsqrdxoWYrTYWPhx/Fknuh7v0yOFjSpg5lLOIAudbzdUKb5lRvZMEtSvQOugbxmImdPesRqfZIGMDhL+LAWHIpB0A4UzPFek89uvkgMkSORm4t8OFGQh8Jjh0SszuWT21mveUvH4NWFU/uyqZaepSmCFvFV0Py6257OKYW3k/rCaRku4Bj9VFHU9gS3dWnPC3dtwXo+/Xg2M9zqx8egKjXPFPeaFQ8q1k43ZqDO7NAnukeHFLe6RaDFRVPv4CUeckohhFnkP4zh3R2AUo+txGAZSwiNnRmyInh8Bmz38VtIyPu2iHcPUyXSfru0nnMpIfVRO3anX2RuIF5CzOIhZ1gp8RcKnxxj/DV5iXv/CshG0TKKuCDlEclic0QTKqBjDX3HBCrAS0IXSTefZgLx8d/V5YWmK7x/BOaOiV5vVzsRHhsxCUqFoyycrlIMAWySsK6K/v0VBo=
+    - secure: H4ksxBKRcHUax9hWAXuKLUMrD3qdYTQgNu8qmQ7L7/9dpv8k0MStbm52ZLkna2rBUE112HzQBwT3o8wzxLFDOkAoPiktl62eE6kuhJIV/TlYPnf5ADglFSp4AX84bdJkWaGuLSA8dDaOBbTnERwRhlaKTUJzxaCgB1/pkThmZO25bP6Pxi7OnGSQ23K1OdKzXITOiAdQ4AtBq+Fi/ECjQNpT6o3IaiTfZ8Q/FgFb5izBLsbbALs7HFJ9loNqPhVaZJ8RUcEM1vRuYd4gjVoegzbsUwZYz7QYipDWVb9+TKsDUp76XLjNdMDlPG1V//YR09hkpvgIpW9+3lxn1aumrhYa1ULgxWGt685yRJHOUx0FBJmjjWbKRfl2rrxdAlMZ5xig9oJlGaay/16aqSAED/wdwQlIJKq1Jhg7mcEIBLoLHSPCeZ3mO0pafUBwWhPBclKJG4lA0HaWdeN0XLX0II7cWFG5Zj/8hjgq5OZrB5gx91PHZCsvvmRkoT3mr2blpfx3eFGDxkE02qQ+fjVAIOAuu6L5Ftab9g6SARo5H9m5dhKoRX8dvKaNlwMS+a9pkb470X3TNnTFF1QlrNsHQoJlQrflPJjAmbkd2hnq6nkR/03+YVslERXa7yOgS7oVx0EjDf2QG2s+ugoQAoXqeR0aVIqUL4H6uIWZQWj7SxU=
+
+# Cloud testing
+after_deploy:
+  - npm install
+  - npm run setup
+  - npm run test-cloud

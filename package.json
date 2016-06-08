@@ -1,0 +1,60 @@
+{
+  "name": "zipcode-ja",
+  "version": "0.0.0",
+  "description": "zipcodes of japanpost.jp as static properties",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib/zipcode-ja.js",
+    "lib/zipcode-ja.json",
+    "lib/zipcode-ja.json.gz"
+  ],
+  "dependencies": {
+    "pako": "^1.0.1"
+  },
+  "scripts": {
+    "prebuild": "node update.js",
+    "build": "browserify -t brfs index.js -s zipcodeJa > lib/zipcode-ja.js",
+    "start": "mocha test.js --watch",
+    "test": "mocha test.js",
+    "lint": "xo",
+    "test-cloud": "zuul test.js",
+    "test-local": "zuul test.js --local --ui mocha-bdd --local 59798 --open",
+    "postversion": "git push --follow-tags && conventional-github-releaser -p atom -r 0"
+  },
+  "devDependencies": {
+    "brfs": "^1.4.3",
+    "browserify": "^13.0.1",
+    "conventional-github-releaser": "^1.1.2",
+    "fast-csv": "^2.0.0",
+    "hanzen": "^0.0.0",
+    "iconv-lite": "^0.4.13",
+    "japanese": "^1.1.0",
+    "mocha": "^2.5.3",
+    "moment": "^2.13.0",
+    "xo": "^0.15.1",
+    "zuul": "^3.9.0"
+  },
+  "xo": {
+    "env": "mocha",
+    "space": 2,
+    "rules": {
+      "no-path-concat": 0
+    }
+  },
+  "keywords": [
+    "japanese",
+    "zip",
+    "ajaxzip"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/59naga/zipcode-ja.git"
+  },
+  "author": "59naga <i59naga@icloud.com> (http://berabou.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/59naga/zipcode-ja/issues"
+  },
+  "homepage": "https://github.com/59naga/zipcode-ja#readme"
+}
