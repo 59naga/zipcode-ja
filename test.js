@@ -1,6 +1,6 @@
 var assert = require('assert');
 var version = require('./package').version;
-var zipcodeJa = require('./');
+var zipcodeJa = require('./shim');
 
 it('ライブラリのバージョンを取得できるべき', function () {
   assert(zipcodeJa.version === version);
