@@ -17,7 +17,7 @@ language: node_js
 before_install:
   - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
 node_js:
-  - 4
+  - '6'
 before_script:
   - npm prune
 script:
@@ -33,7 +33,7 @@ deploy:
   api_key:
     secure: Y+nt75BAkBSshHgS/FCjC7BBmtadNyFmcT5PTEjFxneLpW5SBPe/58iUhxkt5xSDZbxr1l7TH+eOgROxmHx13OROuCUcWrK3m4tbHBbiaI3GcQ7hCEfpnqWeUF53seqDabikypttHcYmELJtW1H+il6U2U5YwPDrEuSOGhnmx1yoZOZ6DCXuLSi/JgLhCY9m7AuvckH40B/7kGMad58Df81EKZYM37/icuG85pWgCoJcPIV1XoF3KTl5T9rPn9pxLdx25xBB/P4tjJ7v+gKuiKiVBJTSpTtlJEQCba/1dWNH1q1/305cgJ/16PlMs0yENQxwVxtcyHpXoULHb0WnGf6Y3YsjG23N/b0GFtgC/lvH/+PBmvbinguu4vrSk53gxqPyZX2+vyvHAtcYN2cssVMe0D3RmPC95U24qeNZ3sqo6w8/C7dk+UjkaBs2/6dUxF0buUmE+iyOmCMQgSiphsGgoqtqCus/qt7vxs6LpIHl/AB+HabQFMMDd0vn091HrFZSxErIr7a57xI7eWcMXPC2sfa2xBu1i5pOWEEb7r8lYnkrCuOjN46/d2VlfFDhLMqqOSvykvrIksSTvHthwPzkaTsNq37/rZmzi+rBs57b3Otvo1EEy2Hcop7FcwBUc/BkrFMPrpV16/IO9Z+V7zilny+kOn+WU238oG6ifM8=
   on:
-    node: 4
+    node: '6'
 
 # SAUCE_TOKENS
 env:
