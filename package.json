@@ -45,7 +45,8 @@
   },
   "keywords": [
     "japanese",
-    "zip",
+    "zipcode",
+    "postalcode",
     "ajaxzip"
   ],
   "repository": {
