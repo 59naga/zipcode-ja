@@ -45,7 +45,7 @@ console.log(zipcodeJa.version, zipcodeJa.lastModified); // '0.0.0', '2016-05-31'
 使用方法
 ---
 
-`zipcodeJa`は、一つの巨大なオブジェクトです。実在する住所をキーとして与えると、対応する住所を返します。
+`zipcodeJa`は、一つの巨大なオブジェクトです。実在する郵便番号をキーとして与えると、対応する住所を返します。
 
 ```js
 console.log(zipcodeJa['1000002']);
@@ -74,7 +74,7 @@ console.log(zipcodeJa['1000002']);
 // }
 ```
 
-それぞれのプロパティは、元データである[郵便番号データの説明](http://www.post.japanpost.jp/zipcode/dl/readme.html)の情報に対応しています。
+それぞれのプロパティは、元データである[郵便番号データの説明](http://www.post.japanpost.jp/zipcode/dl/readme.html)に対応しています。
 
 * `zipcode` … `郵便番号（7桁）`
 * `zipcodeOld` … `（旧）郵便番号（5桁）`
@@ -96,8 +96,8 @@ console.log(zipcodeJa['1000002']);
 
 他のライブラリとの差異
 ---
-* [AjaxZip3/yubinbango](https://github.com/ajaxzip3/ajaxzip3.github.io#readme) と違い、DOM依存を行わない
-* [japan-postal-code](https://github.com/mzp/japan-postal-code#readme) と違い、コールバック関数を用いない
+* [AjaxZip3/yubinbango](https://github.com/ajaxzip3/ajaxzip3.github.io#readme) と違い、DOM依存を行いません。
+* [japan-postal-code](https://github.com/mzp/japan-postal-code#readme) と違い、コールバック関数を使いません。
 
 開発環境
 ---
