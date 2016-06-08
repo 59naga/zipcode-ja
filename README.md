@@ -42,6 +42,8 @@ console.log(zipcodeJa.version, zipcodeJa.lastModified); // '0.0.0', '2016-05-31'
 </script>
 ```
 
+[デモページ](http://jsdo.it/59naga/zipcode-ja)
+
 使用方法
 ---
 
