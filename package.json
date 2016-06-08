@@ -2,16 +2,12 @@
   "name": "zipcode-ja",
   "version": "0.0.2",
   "description": "zipcodes of japanpost.jp as static properties",
-  "main": "index.js",
+  "main": "lib/zipcode-ja.js",
   "files": [
-    "index.js",
     "lib/zipcode-ja.js",
     "lib/zipcode-ja.json",
     "lib/zipcode-ja.json.gz"
   ],
-  "dependencies": {
-    "pako": "^1.0.1"
-  },
   "scripts": {
     "prebuild": "node update.js && ls -lah lib",
     "build": "browserify -t brfs index.js -s zipcodeJa > lib/zipcode-ja.js",
@@ -34,6 +30,7 @@
     "mocha": "^2.5.3",
     "moment": "^2.13.0",
     "npm-statement": "^0.0.0",
+    "pako": "^1.0.1",
     "request": "^2.46.0",
     "unzip": "^0.1.11",
     "xo": "^0.15.1",
