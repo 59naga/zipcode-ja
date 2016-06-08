@@ -1,5 +1,6 @@
 const writeFileSync = require('fs').writeFileSync;
 const gzipSync = require('zlib').gzipSync;
+const mkdirp = require('mkdirp');
 const request = require('request');
 const unzipParse = require('unzip').Parse;
 const moment = require('moment');
@@ -9,6 +10,7 @@ const hiraganize = require('japanese').hiraganize;
 const toZenkaku = require('hanzen').toZenkaku;
 const version = require('./package.json').version;
 
+mkdirp('lib');
 const filename = 'lib/zipcode-ja.json';
 const uri = 'http://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip';
 
