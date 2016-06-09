@@ -34,9 +34,9 @@ import zipcodeJa from 'zipcode-ja';
 console.log(zipcodeJa.version, zipcodeJa.lastModified); // '0.0.0', '2016-05-31'
 ```
 
-**ブラウザ**（[Download Latest](https://npmcdn.com/zipcode-ja/lib/zipcode-ja.js)）
+**ブラウザ**（[Download Latest](http://npm-tarball.antle.red/zipcode-ja)）
 ```html
-<script src="https://npmcdn.com/zipcode-ja/lib/zipcode-ja.js"></script>
+<script src="zipcode-ja/lib/zipcode-ja.js"></script>
 <script>
 console.log(zipcodeJa.version, zipcodeJa.lastModified); // '0.0.0', '2016-05-31'
 </script>
