@@ -8,18 +8,9 @@
   <a href="https://travis-ci.org/59naga/zipcode-ja">
     <img src="http://img.shields.io/travis/59naga/zipcode-ja.svg?style=flat-square">
   </a>
-  <a href="https://gemnasium.com/59naga/zipcode-ja">
-    <img src="https://img.shields.io/gemnasium/59naga/zipcode-ja.svg?style=flat-square">
-  </a>
 </p>
 
-<p align="center">
-  <a href="https://saucelabs.com/u/59798">
-    <img src="http://soysauce.berabou.me/u/59798/zipcode-ja.svg">
-  </a>
-</p>
-
-[日本郵便 平成28年5月31日更新 郵便番号データ](http://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html) NodeJS / ブラウザ用 JavaScript
+[日本郵便 令和元年6月28日更新 郵便番号データ](http://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html) NodeJS / ブラウザ用 JavaScript
 
 インストール
 ---
