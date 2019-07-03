@@ -5,12 +5,16 @@
   "main": "lib/zipcode-ja.js",
   "files": [
     "lib/zipcode-ja.js",
+    "lib/zipcode-ja.js.map",
+    "lib/zipcode-ja.min.js",
+    "lib/zipcode-ja.min.js.map",
     "lib/zipcode-ja.json",
     "lib/zipcode-ja.json.gz"
   ],
   "scripts": {
     "prebuild": "node update.js && ls -lah lib",
-    "build": "browserify -t brfs shim.js -s zipcodeJa > lib/zipcode-ja.js",
+    "build": "browserify -t brfs shim.js -s zipcodeJa --debug | exorcist lib/zipcode-ja.js.map -b lib > lib/zipcode-ja.js",
+    "postbuild": "uglifyjs lib/zipcode-ja.js --in-source-map lib/zipcode-ja.js.map --mangle --compress --output lib/zipcode-ja.min.js --source-map",
     "start": "mocha test.js --watch",
     "test": "mocha test.js",
     "lint": "xo '*.js'",
@@ -22,6 +26,7 @@
     "brfs": "^1.4.3",
     "browserify": "^13.0.1",
     "conventional-github-releaser": "^1.1.2",
+    "exorcist": "^1.0.1",
     "fast-csv": "^2.0.0",
     "hanzen": "^0.0.0",
     "iconv-lite": "^0.4.13",
@@ -32,6 +37,7 @@
     "npm-statement": "^0.0.0",
     "pako": "^1.0.1",
     "request": "^2.46.0",
+    "uglifyjs": "^2.4.11",
     "unzip": "^0.1.11",
     "xo": "^0.15.1",
     "zuul": "^3.9.0"
