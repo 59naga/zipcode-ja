@@ -54,7 +54,7 @@ request(uri, function (error, response) {
       ruby: [
         hiraganize(toZenkaku(kanaTodofuken)),
         hiraganize(toZenkaku(kanaShikuchoson)),
-        hiraganize(toZenkaku(kanaChoiki))
+        kanaChoiki === 'いかにけいさいがないばあい' ? '' : hiraganize(toZenkaku(kanaChoiki))
       ],
       status: status.map(char => Number(char))
     };
