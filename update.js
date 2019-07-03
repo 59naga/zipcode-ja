@@ -31,7 +31,7 @@ request(uri, function (error, response) {
   }
   entry
   .pipe(decodeStream('SJIS'))
-  .pipe(csv())
+  .pipe(csv.parse())
   .on('data', (line) => {
     if (line.length === 0) {
       return;
