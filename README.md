@@ -33,7 +33,7 @@ console.log(zipcodeJa.version, zipcodeJa.lastModified); // '0.0.0', '2016-05-31'
 </script>
 ```
 
-[デモページ](http://jsdo.it/59naga/zipcode-ja)
+[デモページ](https://jsfiddle.net/c5r9bhp7/)
 
 使用方法
 ---
