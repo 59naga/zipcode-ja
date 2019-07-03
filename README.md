@@ -22,18 +22,18 @@ npm install zipcode-ja --save
 
 ```js
 import zipcodeJa from 'zipcode-ja';
-console.log(zipcodeJa.version, zipcodeJa.lastModified); // '0.0.0', '2016-05-31'
+console.log(zipcodeJa.version, zipcodeJa.lastModified); // '0.0.0', '2019-06-28'
 ```
 
-**ブラウザ**（[Download Latest](http://npm-tarball.antle.red/zipcode-ja)）
+**ブラウザ**（[Download Latest](https://github.com/59naga/zipcode-ja/releases)）
 ```html
-<script src="zipcode-ja/lib/zipcode-ja.js"></script>
+<script src="https://unpkg.com/zipcode-ja@0.0.7/lib/zipcode-ja.min.js"></script>
 <script>
-console.log(zipcodeJa.version, zipcodeJa.lastModified); // '0.0.0', '2016-05-31'
+console.log(zipcodeJa.version, zipcodeJa.lastModified); // '0.0.0', '2019-06-28'
 </script>
 ```
 
-[デモページ](https://jsfiddle.net/h14cwyau/)
+[デモページ](https://jsfiddle.net/h14cwyau/2/)
 
 使用方法
 ---
